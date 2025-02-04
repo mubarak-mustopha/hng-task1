@@ -21,7 +21,7 @@ def classify_number():
         data, status = get_data(int(number)), 200
 
     response = jsonify(data)
-    response.header.add("Access-Control-Allow-Origin", "*")
+    response.headers.add("Access-Control-Allow-Origin", "*")
 
     return response, status
 

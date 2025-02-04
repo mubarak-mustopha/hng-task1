@@ -13,8 +13,8 @@ def home():
 
 @app.route("/api/classify_number")
 def classify_number():
-    number = request.args.get("number", "")
-    if not number.isdigit():
+    number = request.args.get("number")
+    if not number or not number.isdigit():
         data, status = {"number": number, "error": True}, 400
 
     else:

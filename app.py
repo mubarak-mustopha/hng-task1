@@ -11,7 +11,7 @@ def home():
     return render_template("home.html")
 
 
-@app.route("/api/classify_number")
+@app.route("/api/classify-number")
 def classify_number():
     number = request.args.get("number")
     if not number or not number.isdigit():

@@ -7,7 +7,7 @@ This is a simple API which returns interesting properties and facts about any gi
 ### API DOCUMENTION
 
 #### Base URL
-`https://hngtask1.vercel.api`
+`https://hng-task1-mauve.vercel.app`
 
 #### Endpoint
 GET `/classify_number`

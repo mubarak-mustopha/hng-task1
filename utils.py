@@ -7,6 +7,8 @@ def parity(num):
 
 
 def armstrong(num):
+    if num < 0:
+        return False
     power = len(str(num))
     num_list = [int(digit) for digit in str(num)]
 
@@ -55,6 +57,6 @@ def get_data(num):
         "is_prime": is_prime(num),
         "is_perfect": is_perfect(num),
         "properties": num_props(num),
-        "digit_sum": digit_sum(num),
+        "digit_sum": digit_sum(abs(num)),
         "fun_fact": fun_fact,
     }

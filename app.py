@@ -14,11 +14,11 @@ def home():
 @app.route("/api/classify-number")
 def classify_number():
     number = request.args.get("number")
-    if not number or not number.isdigit():
-        data, status = {"number": number, "error": True}, 400
-
-    else:
+    try:
         data, status = get_data(int(number)), 200
+    except (ValueError, TypeError) as e:
+        print(e)
+        data, status = {"number": number, "error": True}, 400
 
     response = jsonify(data)
     response.headers.add("Access-Control-Allow-Origin", "*")
